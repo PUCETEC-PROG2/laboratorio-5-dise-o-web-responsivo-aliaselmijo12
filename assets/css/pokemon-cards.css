@@ -1,0 +1,230 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* Tarjetas estilo pantalla Pokédex Game Boy */
+.pokemon-card {
+    background: linear-gradient(135deg, #9bbc0f 0%, #8bac0f 100%);
+    border-radius: 16px;
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 0, 0.3),
+        0 6px 0 #2d2d2d,
+        0 8px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: calc(33.3333% - 32px);
+    max-width: calc(33.3333% - 32px);
+    min-width: 300px;
+    border: 6px solid #2d2d2d;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Imagen del Pokémon en pantalla verde */
+.pokemon-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #9bbc0f 0%, #8bac0f 100%);
+    padding: 20px;
+    filter: contrast(1.1) brightness(0.95);
+    position: relative;
+    z-index: 1;
+}
+
+/* Panel inferior oscuro estilo Game Boy */
+.pokemon-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    background: #0f380f;
+    border-top: 4px solid #2d2d2d;
+    position: relative;
+    z-index: 1;
+}
+
+/* Nombre con tipografía simple */
+.pokemon-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9bbc0f;
+    text-transform: capitalize;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+}
+
+/* Tipos con tipografía simple */
+.pokemon-type {
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    border: 3px solid #000;
+    box-shadow: 
+        inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+        0 3px 0 #000;
+}
+
+/* Colores oficiales de tipos Pokémon */
+.type-grass {
+    background: #78c850;
+    color: #0f380f;
+}
+
+.type-electric {
+    background: #ffd700;
+    color: #2d2d2d;
+}
+
+.type-fire {
+    background: #f08030;
+    color: #fff;
+}
+
+.type-water {
+    background: #6890f0;
+    color: #fff;
+}
+
+.type-normal {
+    background: #a8a878;
+    color: #2d2d2d;
+}
+
+.type-psychic {
+    background: #f85888;
+    color: #fff;
+}
+
+.type-ghost {
+    background: #705898;
+    color: #fff;
+}
+
+.type-fighting {
+    background: #c03028;
+    color: #fff;
+}
+
+.type-poison {
+    background: #a040a0;
+    color: #fff;
+}
+
+.type-ground {
+    background: #e0c068;
+    color: #2d2d2d;
+}
+
+.type-flying {
+    background: #a890f0;
+    color: #fff;
+}
+
+.type-bug {
+    background: #a8b820;
+    color: #2d2d2d;
+}
+
+.type-rock {
+    background: #b8a038;
+    color: #fff;
+}
+
+.type-ice {
+    background: #98d8d8;
+    color: #2d2d2d;
+}
+
+.type-dragon {
+    background: #7038f8;
+    color: #fff;
+}
+
+.type-dark {
+    background: #705848;
+    color: #fff;
+}
+
+.type-steel {
+    background: #b8b8d0;
+    color: #2d2d2d;
+}
+
+.type-fairy {
+    background: #ee99ac;
+    color: #2d2d2d;
+}
+
+@media screen and (max-width: 768px) {
+    .pokemon-grid {
+        gap: 12px;
+    }
+    
+    .pokemon-card {
+        flex: calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }
+
+    .pokemon-image {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .pokemon-name {
+        font-size: 15px;
+    }
+
+    .pokemon-type {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pokemon-card {
+        flex: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .pokemon-image {
+        height: 180px;
+    }
+}
+
+/* Hover effect - pantalla levantándose */
+.pokemon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        inset 0 0 25px rgba(0, 0, 0, 0.4),
+        0 8px 0 #2d2d2d,
+        0 12px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Active/Press effect */
+.pokemon-card:active {
+    transform: translateY(2px);
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 0, 0.5),
+        0 3px 0 #2d2d2d,
+        0 5px 10px rgba(0, 0, 0, 0.4);
+}
