@@ -83,18 +83,18 @@
 }
 
 /* Colores oficiales de tipos Pokémon */
-.type-grass {
-    background: #78c850;
-    color: #0f380f;
+.type-psychic {
+    background: #f85888;
+    color: #fff;
 }
 
-.type-electric {
-    background: #ffd700;
+.type-bug {
+    background: #a8b820;
     color: #2d2d2d;
 }
 
-.type-fire {
-    background: #f08030;
+.type-dragon {
+    background: #7038f8;
     color: #fff;
 }
 
@@ -103,14 +103,14 @@
     color: #fff;
 }
 
-.type-normal {
-    background: #a8a878;
+.type-ice {
+    background: #98d8d8;
     color: #2d2d2d;
 }
 
-.type-psychic {
-    background: #f85888;
-    color: #fff;
+.type-grass {
+    background: #78c850;
+    color: #0f380f;
 }
 
 .type-ghost {
@@ -158,9 +158,9 @@
     color: #fff;
 }
 
-.type-dark {
-    background: #705848;
-    color: #fff;
+.type-ice {
+    background: #98d8d8;
+    color: #2d2d2d;
 }
 
 .type-steel {
